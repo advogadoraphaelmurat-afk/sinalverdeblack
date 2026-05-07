@@ -55,7 +55,7 @@ function App() {
       <header className="glass-header">
         <div className="header-logo" onClick={() => scrollTo('home')} style={{ cursor: 'pointer' }}>
           <img src="/logo transp.png" alt="Logo Sinal Verde" />
-          <span>SINAL <span style={{ color: '#d1d5db' }}>VERDE</span></span>
+          <span>SINAL <span className="text-neon-green">VERDE</span></span>
         </div>
         <div className="header-nav">
           <a href="#sobre" onClick={(e) => { e.preventDefault(); scrollTo('sobre'); }}>SOBRE</a>
@@ -90,7 +90,7 @@ function App() {
             }}
           >
             <span>SINAL</span>
-            <span style={{ color: '#d1d5db', textShadow: '0 0 30px rgba(209,213,219,0.3)' }}>VERDE</span>
+            <span className="text-neon-green">VERDE</span>
           </motion.h1>
           
           <motion.p 

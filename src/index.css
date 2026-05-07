@@ -19,36 +19,31 @@
   scroll-behavior: smooth;
 }
 
-html, body {
-  background-color: var(--bg-color);
+html {
+  background: #0a0a0a;
+}
+
+body {
+  background: url('/bg-dark.png') center center / cover fixed no-repeat;
   color: var(--text-main);
   overflow-x: hidden;
   max-width: 100%;
+  position: relative;
 }
 
-/* City night background */
+/* Dark overlay on top of city image */
 body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    url('/bg-dark.png') center center / cover no-repeat,
-    #0a0a0a;
-  z-index: -2;
-}
-
-/* Dark overlay to darken city image */
-body::after {
   content: '';
   position: fixed;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.78) 0%,
-    rgba(5, 5, 15, 0.70) 40%,
-    rgba(0, 0, 0, 0.82) 100%
+    rgba(0, 0, 0, 0.80) 0%,
+    rgba(0, 5, 10, 0.72) 40%,
+    rgba(0, 0, 0, 0.85) 100%
   );
-  z-index: -1;
+  z-index: 0;
+  pointer-events: none;
 }
 
 ::-webkit-scrollbar { width: 6px; }
@@ -199,6 +194,7 @@ body::after {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  z-index: 1;
 }
 
 .section-container {
@@ -227,11 +223,13 @@ body::after {
   color: #ffffff;
 }
 
+/* Neon green glow — igual ao site principal */
 .text-neon-green {
-  color: #d1d5db;
+  color: #10b981;
   text-shadow:
-    0 0 10px rgba(209, 213, 219, 0.3),
-    0 0 30px rgba(209, 213, 219, 0.2);
+    0 0 10px rgba(16, 185, 129, 0.5),
+    0 0 30px rgba(16, 185, 129, 0.8),
+    0 0 60px rgba(16, 185, 129, 0.6);
 }
 
 /* =====================

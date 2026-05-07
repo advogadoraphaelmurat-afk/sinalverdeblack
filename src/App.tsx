@@ -70,7 +70,7 @@ function App() {
       <main className="app-container">
         
         {/* HERO SECTION */}
-        <section className="section-container" id="home" style={{ alignItems: 'flex-end', paddingTop: '10rem', paddingRight: '10%' }}>
+        <section className="section-container" id="home" style={{ alignItems: 'flex-end', paddingTop: '4rem', paddingRight: '10%' }}>
           <div className="scenic-blob scenic-1" />
           <div className="scenic-blob scenic-2" />
           <Abstract3D />
@@ -134,8 +134,8 @@ function App() {
                   display: 'flex', 
                   alignItems: 'center', 
                   gap: '0.8rem',
-                  background: activeSolution === tab.id ? 'var(--primary-color)' : 'rgba(255,255,255,0.03)',
-                  border: activeSolution === tab.id ? 'none' : '1px solid rgba(255,255,255,0.1)',
+                  background: activeSolution === tab.id ? 'var(--primary-color)' : 'rgba(16, 185, 129, 0.03)',
+                  border: activeSolution === tab.id ? 'none' : '1px solid rgba(16, 185, 129, 0.1)',
                   color: activeSolution === tab.id ? 'white' : 'var(--text-muted)'
                 }}
               >
@@ -298,7 +298,7 @@ function App() {
                       <a href="https://wa.me/5511963321755" target="_blank" rel="noopener noreferrer" className="header-btn" style={{ padding: '1.2rem 2.5rem', borderRadius: '50px', fontSize: '1.1rem' }}>
                         FALAR COM CONSULTOR
                       </a>
-                      <button className="header-btn" style={{ padding: '1.2rem 2.5rem', borderRadius: '50px', fontSize: '1.1rem', background: 'transparent', border: '1px solid rgba(255,255,255,0.1)' }}>
+                      <button className="header-btn" style={{ padding: '1.2rem 2.5rem', borderRadius: '50px', fontSize: '1.1rem', background: 'transparent', border: '1px solid rgba(16, 185, 129, 0.15)' }}>
                         VER PLANOS
                       </button>
                     </div>
@@ -346,7 +346,7 @@ function App() {
                       <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>A partir de</span>
                       <div style={{ fontSize: '2rem', fontWeight: 900 }}>R$ 299 <span style={{ fontSize: '0.9rem', fontWeight: 400, opacity: 0.6 }}>/serviço</span></div>
                     </div>
-                    <button className="header-btn" style={{ width: '100%', background: 'transparent', border: '1px solid rgba(255,255,255,0.1)' }}>SOLICITAR ORÇAMENTO</button>
+                    <button className="header-btn" style={{ width: '100%', background: 'transparent', border: '1px solid rgba(16, 185, 129, 0.15)' }}>SOLICITAR ORÇAMENTO</button>
                   </div>
                   <div className="glass-card" style={{ padding: '2.5rem', border: '1px solid var(--secondary-color)' }}>
                     <div className="meta-label" style={{ background: 'var(--secondary-color)', color: 'white', padding: '0.2rem 0.8rem', borderRadius: '4px', fontSize: '0.7rem', display: 'inline-block', marginBottom: '1rem' }}>MAIS POPULAR</div>
@@ -377,7 +377,7 @@ function App() {
                       <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Sob consulta</span>
                       <div style={{ fontSize: '2rem', fontWeight: 900 }}>Personalizado</div>
                     </div>
-                    <button className="header-btn" style={{ width: '100%', background: 'transparent', border: '1px solid rgba(255,255,255,0.1)' }}>FALAR COM CONSULTOR</button>
+                    <button className="header-btn" style={{ width: '100%', background: 'transparent', border: '1px solid rgba(16, 185, 129, 0.15)' }}>FALAR COM CONSULTOR</button>
                   </div>
                 </div>
 
@@ -413,11 +413,11 @@ function App() {
               </p>
               
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginTop: '3rem' }}>
-                <div style={{ background: 'rgba(255,255,255,0.03)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                <div style={{ background: 'rgba(16, 185, 129, 0.03)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(16, 185, 129, 0.1)' }}>
                   <span style={{ fontSize: '2.5rem', color: 'var(--primary-color)', fontWeight: 900, display: 'block' }}>98%</span>
                   <span style={{ fontSize: '0.8rem', letterSpacing: '0.1rem', color: 'var(--text-muted)' }}>TAXA DE SATISFAÇÃO</span>
                 </div>
-                <div style={{ background: 'rgba(255,255,255,0.03)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                <div style={{ background: 'rgba(16, 185, 129, 0.03)', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(16, 185, 129, 0.1)' }}>
                   <span style={{ fontSize: '2.5rem', color: 'var(--accent-cyan)', fontWeight: 900, display: 'block' }}>OAB</span>
                   <span style={{ fontSize: '0.8rem', letterSpacing: '0.1rem', color: 'var(--text-muted)' }}>COMPLIANCE TOTAL</span>
                 </div>
@@ -426,7 +426,7 @@ function App() {
               {/* CEO Profile */}
               <div style={{ marginTop: '4rem', display: 'flex', alignItems: 'center', gap: '2rem', background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)' }}>
                 <div style={{ width: '120px', height: '120px', borderRadius: '50%', overflow: 'hidden', border: '3px solid var(--primary-color)', flexShrink: 0 }}>
-                  <img src="/ceo.png" alt="Patrícia M. - CEO" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/ceo.png" alt="Patrícia M. - CEO" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%) brightness(0.8)' }} />
                 </div>
                 <div>
                   <h3 style={{ fontSize: '1.5rem', marginBottom: '0.2rem' }}>Patrícia M.</h3>

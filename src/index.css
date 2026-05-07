@@ -237,12 +237,12 @@ body::before {
    ===================== */
 .abstract-3d-center {
   position: absolute;
-  top: 40%;
-  left: 20%;
+  top: 45%;
+  left: 75%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
-  z-index: 0;
+  width: 500px;
+  height: 500px;
+  z-index: -1;
   pointer-events: none;
 }
 
@@ -256,8 +256,8 @@ body::before {
   animation: spin 20s linear infinite;
 }
 
-.abstract-glow-1 { background: radial-gradient(circle, #6b7280, transparent 70%); }
-.abstract-glow-2 { background: radial-gradient(circle, #374151, transparent 70%); animation-direction: reverse; animation-duration: 25s; }
+.abstract-glow-1 { background: radial-gradient(circle, rgba(16, 185, 129, 0.25), transparent 70%); }
+.abstract-glow-2 { background: radial-gradient(circle, rgba(16, 185, 129, 0.15), transparent 70%); animation-direction: reverse; animation-duration: 25s; }
 
 .abstract-mesh {
   position: absolute;

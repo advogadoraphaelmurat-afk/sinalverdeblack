@@ -576,16 +576,15 @@ function App() {
         {/* FOOTER */}
         <footer className="scrovex-footer" style={{ borderTop: '1px solid rgba(255,255,255,0.05)', padding: '4rem 2rem', position: 'relative', overflow: 'hidden' }}>
           <div className="scenic-blob scenic-4" />
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-            <div className="header-logo" style={{ fontSize: '1rem' }}>
-              <img src="/logo transp.png" alt="Logo Sinal Verde" style={{ height: '30px' }} />
-              SINAL VERDE
-            </div>
-            <div className="header-nav" style={{ display: 'flex', gap: '2rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2.5rem', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+            <img src="/logo-branco.png" alt="Logo Sinal Verde" style={{ height: '80px', objectFit: 'contain' }} />
+            
+            <div className="header-nav" style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="#" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Termos de Uso</a>
               <a href="#" style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>Política de Privacidade</a>
               <a href="https://wa.me/5511963321755" style={{ color: 'var(--primary-color)', textDecoration: 'none', fontWeight: 600 }}>Suporte Online</a>
             </div>
+            
             <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>
               Todos os direitos reservados © SINAL VERDE APOIO ADMINISTRATIVO 2026
             </div>

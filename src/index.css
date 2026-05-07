@@ -38,9 +38,9 @@ body::before {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.80) 0%,
-    rgba(0, 5, 10, 0.72) 40%,
-    rgba(0, 0, 0, 0.85) 100%
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 5, 10, 0.86) 40%,
+    rgba(0, 0, 0, 0.95) 100%
   );
   z-index: -2;
   pointer-events: none;

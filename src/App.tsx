@@ -90,10 +90,11 @@ function App() {
               transition={{ duration: 0.8 }}
               className="hero-content-inner"
             >
-              <h1 className="hero-title-huge">
-                <span>SINAL</span>
-                <span className="text-neon-green">VERDE</span>
-              </h1>
+              <img 
+                src="/logo-branco.png" 
+                alt="Logo Sinal Verde" 
+                className="hero-logo"
+              />
               
               <p className="hero-subtitle">
                 Confiabilidade na sua Gestão <br />

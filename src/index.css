@@ -27,28 +27,26 @@ body {
   color: var(--text-main);
   overflow-x: hidden;
   max-width: 100%;
-  position: relative;
-  background: #000; /* Fallback */
+  background: #000;
 }
 
 /* GLOBAL LAYERED BACKGROUND SYSTEM */
+/* Layer 1: imagem da cidade */
 .global-bg {
   position: fixed;
   inset: 0;
   background: url('/bg-dark.png') center center / cover no-repeat;
-  z-index: -2;
+  z-index: 0;
+  pointer-events: none;
 }
 
+/* Layer 2: overlay escuro que COBRE toda a imagem */
 .global-overlay {
   position: fixed;
   inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.8)
-  );
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.72);
+  pointer-events: none;
 }
 
 ::-webkit-scrollbar { width: 6px; }
@@ -196,6 +194,24 @@ body {
 /* =====================
    LAYOUT
    ===================== */
+.app-container {
+  position: relative;
+  z-index: 2; /* Must be above global-overlay (z-index: 1) */
+  margin-left: 90px;
+  width: calc(100% - 90px);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
 /* =====================
    HERO / HOME SECTION
    ===================== */
@@ -206,7 +222,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 0; /* Remove default padding for hero */
+  padding: 0;
 }
 
 /* LAYER 0: BACKGROUND - Removido daqui para ser global */

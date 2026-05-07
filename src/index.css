@@ -191,43 +191,85 @@ body::before {
 /* =====================
    LAYOUT
    ===================== */
-.app-container {
-  margin-left: 90px;
-  width: calc(100% - 90px);
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-  z-index: 1;
-}
-
-.section-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5rem 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
+/* =====================
+   HERO / HOME SECTION
+   ===================== */
 .section-container#home {
+  position: relative;
   min-height: 100svh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
+  overflow: hidden;
+  padding: 0; /* Remove default padding for hero */
 }
 
-/* =====================
-   HERO
-   ===================== */
-.hero-title-huge {
-  font-size: clamp(2rem, 5.5vw, 4.2rem);
-  font-weight: 900;
-  letter-spacing: 1.5vw;
-  line-height: 1;
+/* LAYER 0: BACKGROUND */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/bg-dark.png') center/cover no-repeat;
+  z-index: 0;
+}
+
+/* LAYER 1: OVERLAY (VIDRO ESCURO COM BLUR) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* LAYER 2: VISUAL (3D + EFEITOS) */
+.hero-visual {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* LAYER 3: CONTEÚDO */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align right as per brand style */
   text-align: right;
   color: #ffffff;
 }
+
+.hero-content-inner {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 3rem;
+  border-radius: 24px;
+  border: 1px solid var(--green-soft);
+  max-width: 700px;
+}
+
+.hero-title-huge {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
 
 /* Neon green glow — igual ao site principal */
 .text-neon-green {
@@ -244,10 +286,8 @@ body::before {
 .abstract-3d-center {
   position: absolute !important;
   top: 50%;
-  left: 75%;
+  left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
-  z-index: 0;
-  pointer-events: none;
 }
 
 .abstract-glow-1, .abstract-glow-2 {
@@ -435,14 +475,23 @@ body::before {
   .header-logo span { font-size: 1rem; }
 
   #home {
-    align-items: center !important;
-    padding: 4rem 1rem 4rem !important;
     min-height: 100svh;
+    padding: 0 !important;
+  }
+  
+  .hero-content {
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.5rem;
+  }
+  
+  .hero-content-inner {
+    padding: 2rem 1.5rem;
+    width: 100%;
   }
 
   .hero-title-huge {
     font-size: 3rem !important;
-    text-align: center !important;
     letter-spacing: 0.3rem !important;
   }
 

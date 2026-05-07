@@ -70,44 +70,34 @@ function App() {
       <main className="app-container">
         
         {/* HERO SECTION */}
-        <section className="section-container" id="home" style={{ alignItems: 'flex-end', paddingTop: '4rem', paddingRight: '10%' }}>
-          <div className="scenic-blob scenic-1" />
-          <div className="scenic-blob scenic-2" />
-          <Abstract3D />
+        <section className="section-container" id="home">
+          <div className="hero-bg" />
+          <div className="hero-overlay" />
           
-          <motion.h1 
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="hero-title-huge"
-            style={{ 
-              textAlign: 'right', 
-              display: 'flex', 
-              flexDirection: 'column',
-              fontSize: 'clamp(2rem, 6vw, 4.5rem)',
-              letterSpacing: '0.5rem',
-              lineHeight: 1
-            }}
-          >
-            <span>SINAL</span>
-            <span className="text-neon-green">VERDE</span>
-          </motion.h1>
+          <div className="hero-visual">
+            <div className="scenic-blob scenic-1" />
+            <div className="scenic-blob scenic-2" />
+            <Abstract3D />
+          </div>
           
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            style={{ 
-              textAlign: 'right', 
-              fontSize: 'clamp(1rem, 2vw, 1.5rem)', 
-              color: 'var(--text-muted)',
-              marginTop: '1.5rem',
-              maxWidth: '600px'
-            }}
-          >
-            Confiabilidade na sua Gestão <br />
-            <span style={{ fontSize: '0.8rem', letterSpacing: '0.3rem', opacity: 0.5, textTransform: 'uppercase' }}>Assessoria Paralegal Especializada</span>
-          </motion.p>
+          <div className="hero-content">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="hero-content-inner"
+            >
+              <h1 className="hero-title-huge">
+                <span>SINAL</span>
+                <span className="text-neon-green">VERDE</span>
+              </h1>
+              
+              <p className="hero-subtitle">
+                Confiabilidade na sua Gestão <br />
+                <span style={{ fontSize: '0.8rem', letterSpacing: '0.3rem', opacity: 0.5, textTransform: 'uppercase' }}>Assessoria Paralegal Especializada</span>
+              </p>
+            </motion.div>
+          </div>
         </section>
 
         {/* SOLUTIONS SELECTOR SECTION */}

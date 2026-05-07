@@ -40,6 +40,9 @@ function App() {
 
   return (
     <>
+      <div className="global-bg" />
+      <div className="global-overlay" />
+      
       {/* Sidebar */}
       <aside className="glass-sidebar">
         <div className="sidebar-item" data-label="Início" onClick={() => scrollTo('home')}><Home size={20} /></div>

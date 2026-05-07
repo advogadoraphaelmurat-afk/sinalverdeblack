@@ -24,26 +24,31 @@ html {
 }
 
 body {
-  background: url('/bg-dark.png') center center / cover fixed no-repeat;
   color: var(--text-main);
   overflow-x: hidden;
   max-width: 100%;
   position: relative;
+  background: #000; /* Fallback */
 }
 
-/* Dark overlay on top of city image */
-body::before {
-  content: '';
+/* GLOBAL LAYERED BACKGROUND SYSTEM */
+.global-bg {
   position: fixed;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 5, 10, 0.85) 40%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: url('/bg-dark.png') center center / cover no-repeat;
   z-index: -2;
-  pointer-events: none;
+}
+
+.global-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.8)
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 ::-webkit-scrollbar { width: 6px; }
@@ -204,29 +209,21 @@ body::before {
   padding: 0; /* Remove default padding for hero */
 }
 
-/* LAYER 0: BACKGROUND */
+/* LAYER 0: BACKGROUND - Removido daqui para ser global */
 .hero-bg {
-  position: absolute;
-  inset: 0;
-  background: url('/bg-dark.png') center/cover no-repeat;
-  z-index: 0;
+  display: none;
 }
 
-/* LAYER 1: OVERLAY (VIDRO ESCURO COM BLUR) */
+/* LAYER 1: OVERLAY (VIDRO ESCURO COM BLUR) - Removido daqui para ser global */
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  display: none;
 }
 
 /* LAYER 2: VISUAL (3D + EFEITOS) */
 .hero-visual {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 0; /* Baixado para ficar atrás do texto */
   pointer-events: none;
 }
 
